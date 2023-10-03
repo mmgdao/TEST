@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 main {
     background-image: url(//camp.potepan.com/wp-content/themes/potepancamp/assets/styles/../images/home/first-view/top-hero.jpg);
     background-size: cover;
@@ -305,6 +309,11 @@ main {
     width: 100%;
 }
 
+.FirstViewContent_images img {
+    width: 27.5%;
+}
+
+    
 .FirstViewContent_button {
     width: 100% !important;
 }
