@@ -1,16 +1,15 @@
-var time = 0;
 var hour  = 0;
 var min  = 0;
 var sec  = 0;
-var mSec = 0;
+var μSec = 0;
 
 
 function start() {
-time = setInterval(function() {
-mSec ++;
-if (mSec == 10) {
+TimerId = setInterval(function() {
+μSec ++;
+if (μSec == 10) {
  sec++;
- mSec = 0;
+ μSec = 0;
 }
 if (sec == 60) {
  min++;
@@ -21,12 +20,12 @@ if (min == 60) {
  min = 0;
 }
 
-document.getElementById('time').innerHTML = hour + ":" + min + ":" + sec + ":" + mSec;
+document.getElementById('time').innerHTML = hour + ":" + min + ":" + sec + ":" + μSec;
 },100);
 };
 
 function stop(){
-clearInterval(time);
+clearInterval(TimerId);
 }
 
 function reset(){
@@ -34,13 +33,13 @@ document.getElementById('time').innerHTML = '0:0:0:0';
 hour = 0;
 min = 0;
 sec = 0;
-mSec = 0;
+μSec = 0;
 }
 
 function startBtn() {
  btn_start.disabled = true;
  btn_stop.disabled = false;
- btn_reset.disabled = false;
+ btn_reset.disabled = true;
 
  start();
 }
@@ -61,5 +60,7 @@ function resetBtn() {
 
  reset();
 }
+
+
 
 
