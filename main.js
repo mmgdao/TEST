@@ -13,10 +13,10 @@ function clickbutton(num) {
             result.innerHTML += num.innerHTML;
         }     
     }else if((num.innerHTML == "00") || (num.innerHTML == "0")) {
-        if(number.includes(result.innerHTML.slice(-1)))
-            result.innerHTML += num.innerHTML;
-        else {
+        if((result.innerHTML == 0) || (kigou.includes(result.innerHTML.slice(-1))) ){
             return;
+        }else {
+            result.innerHTML += num.innerHTML;
         }
 
     }else if(result.innerHTML == 0) {
@@ -24,11 +24,10 @@ function clickbutton(num) {
     }else {
         result.innerHTML += num.innerHTML;
     }
-    console.log(result.innerHTML);
+   
     
 }
 
 function equalbutton() {
-    console.log(eval(result.innerHTML));
     result.innerHTML = eval(result.innerHTML);
 }
