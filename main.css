@@ -1,4 +1,10 @@
-#time {
-    margin-bottom: 30px;
-    font-size: 20px;
+#result {
+    text-align: right;
+    border: 2px black solid;
+    background-color: aquamarine;
 }
+
+.dentaku {
+    border: 1px black solid;
+}
+
